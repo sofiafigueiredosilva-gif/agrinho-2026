@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroEquilíbrio | Agrinho 2026</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(to bottom, #f0f7f0, #e6f0e6);
+    }
+
+    header {
+      background: #1a5f2a;
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav h1 {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                  url('https://source.unsplash.com/random/1600x900/?farm,soybean,parana') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 140px 20px;
+    }
+
+    .hero h2 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ffcc00;
+      color: #1a5f2a;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #ffd633;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #1a5f2a;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h4 {
+      font-size: 1.6rem;
+      margin: 15px 0;
+      color: #1a5f2a;
+    }
+
+    .calculadora {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 40px auto;
+    }
+
+    input, button {
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      width: 100%;
+      font-size: 1.1rem;
+    }
+
+    button {
+      background: #1a5f2a;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background: #2a8f3f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #1a5f2a;
+      color: white;
+      margin-top: 60px;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>🌱 AgroEquilíbrio</h1>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#calculadora">Calculadora</a></li>
+        <li><a href="#dicas">Dicas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2>Agro Forte, Futuro Sustentável</h2>
+    <p>Equilíbrio entre produção agrícola e preservação do meio ambiente no Paraná</p>
+    <a href="#calculadora" class="btn">Testar Minha Fazenda</a>
+  </section>
+
+  <section class="section" id="sobre">
+    <h3>Por que o equilíbrio é importante?</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>🌾 Produção Forte</h4>
+        <p>O Paraná é um dos maiores produtores de soja, milho, frango e leite do Brasil. Manter essa força é essencial para a economia.</p>
+      </div>
+      <div class="card">
+        <h4>🌳 Meio Ambiente</h4>
+        <p>Preservar rios, matas ciliares e a qualidade do solo garante que as próximas gerações possam continuar produzindo.</p>
+      </div>
+      <div class="card">
+        <h4>⚖️ Equilíbrio</h4>
+        <p>Com tecnologia, plantio direto, rotação de culturas e boas práticas, é possível produzir muito respeitando a natureza.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section calculadora" id="calculadora">
+    <h3>Calculadora de Sustentabilidade</h3>
+    <p style="text-align:center; margin-bottom:20px;">Veja o nível de sustentabilidade da sua propriedade</p>
+    
+    <label>Área da propriedade (hectares):</label>
+    <input type="number" id="area" placeholder="Ex: 50" value="50">
+
+    <label>Quantidade de árvores preservadas:</label>
+    <input type="number" id="arvores" placeholder="Ex: 120" value="120">
+
+    <label>Uso de plantio direto (%):</label>
+    <input type="number" id="plantio" placeholder="Ex: 70" value="70">
+
+    <button onclick="calcular()">Calcular Sustentabilidade</button>
+    
+    <div id="resultado" class="result"></div>
+  </section>
+
+  <section class="section" id="dicas">
+    <h3>Boas Práticas para o Agro Sustentável</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>🌱 Plantio Direto</h4>
+        <p>Reduz erosão do solo e aumenta a matéria orgânica.</p>
+      </div>
+      <div class="card">
+        <h4>💧 Irrigação Eficiente</h4>
+        <p>Use irrigação por gotejamento para economizar água.</p>
+      </div>
+      <div class="card">
+        <h4>🐝 Preservação de Matas</h4>
+        <p>Deixe áreas de reserva legal e matas ciliares protegidas.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>AgroEquilíbrio</strong> — Projeto desenvolvido para o Agrinho 2026</p>
+    <p>Tema: “Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente”</p>
+    <p>Aluno: [SEU NOME AQUI] • Escola: [SUA ESCOLA] • Cidade: [SUA CIDADE], Paraná</p>
+  </footer>
+
+  <script>
+    function calcular() {
+      const area = parseFloat(document.getElementById('area').value) || 0;
+      const arvores = parseFloat(document.getElementById('arvores').value) || 0;
+      const plantio = parseFloat(document.getElementById('plantio').value) || 0;
+
+      let pontuacao = 0;
+      
+      if (area > 0) pontuacao += 30;
+      if (arvores > 50) pontuacao += 35;
+      if (plantio >= 60) pontuacao += 35;
+
+      let nivel = "";
+      let cor = "";
+
+      if (pontuacao >= 85) {
+        nivel = "🌟 Excelente! Sua propriedade está muito sustentável.";
+        cor = "#1a5f2a";
+      } else if (pontuacao >= 60) {
+        nivel = "✅ Boa! Continue melhorando as práticas sustentáveis.";
+        cor = "#ffcc00";
+      } else {
+        nivel = "⚠️ Atenção! É importante adotar mais práticas sustentáveis.";
+        cor = "#d32f2f";
+      }
+
+      document.getElementById('resultado').innerHTML = `
+        <strong style="color:${cor}">${nivel}</strong><br>
+        Pontuação: ${pontuacao}/100
+      `;
+    }
+
+    // Animação suave ao carregar
+    window.onload = () => {
+      document.querySelectorAll('.card').forEach((card, i) => {
+        card.style.opacity = 0;
+        setTimeout(() => {
+          card.style.transition = 'all 0.6s ease';
+          card.style.opacity = 1;
+        }, 200 * i);
+      });
+    };
+  </script>
+</body>
+</html>
